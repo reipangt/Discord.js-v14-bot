@@ -14,7 +14,9 @@ const client = new Client({
     ]
 });
 
-require('dotenv').config(); // You need to reference dotenv in order to use .env
+const TOKEN('TOKEN');
+
+//require('dotenv').config(); // You need to reference dotenv in order to use .env
 
 // now we gonna check if the bot is online by using the ready event listener
 client.on('ready', () => {
@@ -28,4 +30,4 @@ client.on('ready', () => {
     client.user.setStatus('dnd');
 });
 
-client.login(process.env.TOKEN); // login the discord bot
+client.login(TOKEN); // login the discord bot
